@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dpku6e4f14sfb" path="res://mensajes/mensajes.gd" id="1_i3wff"]
 [ext_resource type="Script" uid="uid://nb4l1ksvvt0g" path="res://mensajes/opciones.gd" id="2_i3wff"]
+[ext_resource type="PackedScene" uid="uid://ddkfme812poeb" path="res://menu/menu.tscn" id="3_nst8m"]
 
 [node name="Node2D" type="Node2D" unique_id=945820080]
 
@@ -23,18 +24,25 @@ text = "chat 2"
 
 [node name="chat1" type="CanvasLayer" parent="." unique_id=617141949]
 
-[node name="Mensajes" type="ScrollContainer" parent="chat1" unique_id=1634922461]
+[node name="ScrollContainer" type="ScrollContainer" parent="chat1" unique_id=1634922461]
 offset_left = 384.0
 offset_right = 768.0
 offset_bottom = 448.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="chat1/Mensajes" unique_id=1376293297]
+[node name="PanelContainer" type="PanelContainer" parent="chat1/ScrollContainer" unique_id=1160650357]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Mensajes" type="VBoxContainer" parent="chat1/ScrollContainer" unique_id=1376293297 node_paths=PackedStringArray("opcionesNodo")]
 layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("1_i3wff")
-guion = "res://mensajes/mensajes.txt"
+opcionesNodo = NodePath("../../Opciones")
+guion = "res://mensajes/mensajes1.txt"
 
 [node name="Opciones" type="VBoxContainer" parent="chat1" unique_id=435834509 node_paths=PackedStringArray("buttYes", "buttNo")]
+visible = false
 offset_left = 448.0
 offset_top = 480.0
 offset_right = 704.0
@@ -43,6 +51,7 @@ size_flags_vertical = 3
 script = ExtResource("2_i3wff")
 buttYes = NodePath("Yes")
 buttNo = NodePath("Nou")
+badEnding = ExtResource("3_nst8m")
 metadata/_edit_group_ = true
 
 [node name="Yes" type="Button" parent="chat1/Opciones" unique_id=1028435532]
@@ -54,3 +63,5 @@ text = "opcion 1"
 layout_mode = 2
 size_flags_vertical = 3
 text = "opcion 2"
+
+[node name="PopUps" type="Node2D" parent="chat1" unique_id=944412059]
