@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bnkga81bkstr8"]
+
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_vvbuu"]
+
+[node name="PopUp" type="Sprite2D" unique_id=872176486]
+texture = ExtResource("1_vvbuu")
+
+[node name="Button" type="Button" parent="." unique_id=782841030]
+offset_left = 32.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = -33.0
+text = "X"

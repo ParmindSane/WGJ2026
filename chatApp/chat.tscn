@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://imal5mho24vc"]
+
+[ext_resource type="Script" uid="uid://dpku6e4f14sfb" path="res://mensajes/mensajes.gd" id="1_i3wff"]
+[ext_resource type="Script" uid="uid://nb4l1ksvvt0g" path="res://mensajes/opciones.gd" id="2_i3wff"]
+
+[node name="Node2D" type="Node2D" unique_id=945820080]
+
+[node name="Perfiles" type="VBoxContainer" parent="." unique_id=1241352945]
+offset_right = 128.0
+offset_bottom = 256.0
+size_flags_vertical = 3
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Perfiles" unique_id=969651375]
+layout_mode = 2
+size_flags_vertical = 3
+text = "chat 1"
+
+[node name="Button2" type="Button" parent="Perfiles" unique_id=2132299490]
+layout_mode = 2
+size_flags_vertical = 3
+text = "chat 2"
+
+[node name="chat1" type="CanvasLayer" parent="." unique_id=617141949]
+
+[node name="Mensajes" type="ScrollContainer" parent="chat1" unique_id=1634922461]
+offset_left = 384.0
+offset_right = 768.0
+offset_bottom = 448.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="chat1/Mensajes" unique_id=1376293297]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("1_i3wff")
+guion = "res://mensajes/mensajes.txt"
+
+[node name="Opciones" type="VBoxContainer" parent="chat1" unique_id=435834509 node_paths=PackedStringArray("buttYes", "buttNo")]
+offset_left = 448.0
+offset_top = 480.0
+offset_right = 704.0
+offset_bottom = 608.0
+size_flags_vertical = 3
+script = ExtResource("2_i3wff")
+buttYes = NodePath("Yes")
+buttNo = NodePath("Nou")
+metadata/_edit_group_ = true
+
+[node name="Yes" type="Button" parent="chat1/Opciones" unique_id=1028435532]
+layout_mode = 2
+size_flags_vertical = 3
+text = "opcion 1"
+
+[node name="Nou" type="Button" parent="chat1/Opciones" unique_id=782807637]
+layout_mode = 2
+size_flags_vertical = 3
+text = "opcion 2"

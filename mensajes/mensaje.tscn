@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cvuhx2fgwq61k"]
+
+[ext_resource type="Script" uid="uid://byyfn452p5fbv" path="res://mensajes/mensaje.gd" id="1_6q5bo"]
+
+[node name="Mensaje" type="PanelContainer" unique_id=402123576 node_paths=PackedStringArray("label")]
+custom_minimum_size = Vector2(150, 50)
+size_flags_horizontal = 8
+script = ExtResource("1_6q5bo")
+label = NodePath("Label")
+
+[node name="Label" type="Label" parent="." unique_id=1705463368]
+layout_mode = 2
+text = "mensaje (?"
+horizontal_alignment = 2
+vertical_alignment = 1

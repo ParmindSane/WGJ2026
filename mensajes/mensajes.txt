@@ -1,0 +1,5 @@
+ ; 5 ; Hola (?)
+ ; 2 ; Hola de nuevo
+ ; 1 ; Y hola por las dudas
+t ; 0.5 ; Sí
+ ; 2 ; ¿ya dije hola?

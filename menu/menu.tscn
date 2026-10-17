@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ddkfme812poeb"]
+
+[node name="Menu" type="Node2D" unique_id=331481898]
+
+[node name="Opciones" type="VBoxContainer" parent="." unique_id=1139170533]
+offset_left = 496.0
+offset_top = 184.0
+offset_right = 704.0
+offset_bottom = 320.0
+size_flags_vertical = 3
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Opciones" unique_id=406500008]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Jugar"
+
+[node name="Button2" type="Button" parent="Opciones" unique_id=102097921]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Créditos"
