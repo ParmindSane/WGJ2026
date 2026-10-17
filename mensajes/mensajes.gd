@@ -6,13 +6,18 @@ var mensajesNodos: Array[Mensaje]
 var mensajesDatos := [[]]
 var opciones: Array[Dictionary]
 var tanda := 0
+var popUpsCerrados := true
 
 @export var opcionesNodo: Opciones
+#@export var popUpsNodos: 
+
+@export var scrollNodo: ScrollContainer
 
 @export_file("*.txt") var guion: String
 
 func _ready():
 	opcionesNodo.noEsNo.connect(dijoNo)
+	resized.connect(scrollDown)
 	
 	var archivo = FileAccess.open(guion, FileAccess.READ)
 	while !archivo.eof_reached():
@@ -42,6 +47,8 @@ func recibirMensajes():
 		mensajesNodos.push_back(m)
 		add_child(m)
 	
+	await get_tree().create_timer(1).timeout
+	
 	if tanda < opciones.size():
 		mandarOpciones.emit(tanda)
 		opcionesNodo.setOpciones(opciones[tanda].yes, opciones[tanda].no, tanda)
@@ -51,4 +58,9 @@ func dijoNo(_tanda: int):
 	if _tanda == tanda:
 		tanda += 1
 		recibirMensajes()
+	
+
+func scrollDown():
+	await get_tree().create_timer(get_process_delta_time()).timeout
+	scrollNodo.scroll_vertical = scrollNodo.get_v_scroll_bar().max_value
 	

@@ -28,17 +28,16 @@ text = "chat 2"
 offset_left = 384.0
 offset_right = 768.0
 offset_bottom = 448.0
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="chat1/ScrollContainer" unique_id=1160650357]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Mensajes" type="VBoxContainer" parent="chat1/ScrollContainer" unique_id=1376293297 node_paths=PackedStringArray("opcionesNodo")]
+[node name="Mensajes" type="VBoxContainer" parent="chat1/ScrollContainer" unique_id=1376293297 node_paths=PackedStringArray("opcionesNodo", "scrollNodo")]
 layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("1_i3wff")
 opcionesNodo = NodePath("../../Opciones")
+scrollNodo = NodePath("..")
 guion = "res://mensajes/mensajes1.txt"
 
 [node name="Opciones" type="VBoxContainer" parent="chat1" unique_id=435834509 node_paths=PackedStringArray("buttYes", "buttNo")]

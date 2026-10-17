@@ -1,3 +1,9 @@
+ ; 0.25 ; Spam
+ ; 0.25 ; Spam
+ ; 0.25 ; Spam
+ ; 0.25 ; Spam
+ ; 0.25 ; Spam
+ ; 0.25 ; Spam
  ; 1 ; Hola (?)
  ; 1 ; Hola de nuevo
  ; 1 ; Y hola por las dudas
