@@ -24,8 +24,7 @@ func goBadEnding():
 	get_tree().change_scene_to_packed(badEnding)
 	
 
-signal noEsNo(id: String)
+signal dijoNo(id: String)
 func decirNo():
-	noEsNo.emit(tanda)
-	hide()
+	dijoNo.emit(tanda)
 	

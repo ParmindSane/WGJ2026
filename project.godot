@@ -25,6 +25,10 @@ window/stretch/aspect="expand"
 movie_writer/movie_file="E:/Programacosas/WomanGameJam/test.ogv"
 movie_writer/fps=30
 
+[global_group]
+
+popUp=""
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

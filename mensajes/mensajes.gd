@@ -9,14 +9,15 @@ var tanda := 0
 var popUpsCerrados := true
 
 @export var opcionesNodo: Opciones
-#@export var popUpsNodos: 
+@export var popUpsNodos: PopUps
 
 @export var scrollNodo: ScrollContainer
 
 @export_file("*.txt") var guion: String
 
 func _ready():
-	opcionesNodo.noEsNo.connect(dijoNo)
+	opcionesNodo.dijoNo.connect(dijoNo)
+	popUpsNodos.cerrados.connect(func(): popUpsCerrados = true)
 	resized.connect(scrollDown)
 	
 	var archivo = FileAccess.open(guion, FileAccess.READ)
@@ -37,7 +38,6 @@ func _ready():
 	recibirMensajes()
 	
 
-signal mandarOpciones(yes: String, no: String, tanda: int)
 func recibirMensajes():
 	for d in mensajesDatos[tanda]:
 		await get_tree().create_timer(float(d.delay)).timeout
@@ -47,20 +47,23 @@ func recibirMensajes():
 		mensajesNodos.push_back(m)
 		add_child(m)
 	
+	popUpsCerrados = false
 	await get_tree().create_timer(1).timeout
 	
 	if tanda < opciones.size():
-		mandarOpciones.emit(tanda)
 		opcionesNodo.setOpciones(opciones[tanda].yes, opciones[tanda].no, tanda)
 	
 
 func dijoNo(_tanda: int):
-	if _tanda == tanda:
+	print("Dijo que no y los popups están " + str(popUpsCerrados))
+	if _tanda == tanda && popUpsCerrados:
+		opcionesNodo.hide()
+		
 		tanda += 1
 		recibirMensajes()
 	
 
 func scrollDown():
 	await get_tree().create_timer(get_process_delta_time()).timeout
-	scrollNodo.scroll_vertical = scrollNodo.get_v_scroll_bar().max_value
+	scrollNodo.scroll_vertical = ceil(scrollNodo.get_v_scroll_bar().max_value)
 	

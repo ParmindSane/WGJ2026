@@ -4,9 +4,6 @@
  ; 0.25 ; Spam
  ; 0.25 ; Spam
  ; 0.25 ; Spam
- ; 1 ; Hola (?)
- ; 1 ; Hola de nuevo
- ; 1 ; Y hola por las dudas
 ? ; Dale ; Ni en pedo
  ; 2 ; ¿segura?
  ; 1 ; Mirá que está re piola

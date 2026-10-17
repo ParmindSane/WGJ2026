@@ -3,7 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_vvbuu"]
 [ext_resource type="Script" uid="uid://dqsqii6fyd4uq" path="res://popUps/pop_up.gd" id="2_3lr0a"]
 
-[node name="PopUp" type="Sprite2D" unique_id=872176486 node_paths=PackedStringArray("buttCerrar")]
+[node name="PopUp" type="Sprite2D" unique_id=872176486 node_paths=PackedStringArray("buttCerrar") groups=["popUp"]]
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_vvbuu")
 script = ExtResource("2_3lr0a")
 buttCerrar = NodePath("Button")
