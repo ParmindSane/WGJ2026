@@ -1,6 +1,7 @@
  ; 0.25 ; Spam
 ? ; Dale ; Ni en pedo
  ; 2 ; ¿segura?
- ; 1 ; Mirá que está re piola
 ? ; Ok ; Te dije que no
+ ; 1 ; ¿pero segura segura?
+? ; bue ; >:/
  ; 2 ; :c

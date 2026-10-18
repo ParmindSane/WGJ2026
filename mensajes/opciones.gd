@@ -28,3 +28,7 @@ signal dijoNo(id: String)
 func decirNo():
 	dijoNo.emit(tanda)
 	
+
+func puedeDecirNo(_puede: bool):
+	buttNo.disabled = !_puede
+	

@@ -75,7 +75,24 @@ position = Vector2(576, 256)
 
 [node name="PopUp2" parent="chat1/PopUps" unique_id=984780521 instance=ExtResource("5_njpkb")]
 position = Vector2(576, 256)
+nivel = 1
 
 [node name="PopUp3" parent="chat1/PopUps" unique_id=742094352 instance=ExtResource("5_njpkb")]
 position = Vector2(576, 256)
 nivel = 1
+
+[node name="PopUp4" parent="chat1/PopUps" unique_id=821169681 instance=ExtResource("5_njpkb")]
+position = Vector2(576, 256)
+nivel = 1
+
+[node name="PopUp5" parent="chat1/PopUps" unique_id=1412076695 instance=ExtResource("5_njpkb")]
+position = Vector2(576, 256)
+nivel = 2
+
+[node name="PopUp6" parent="chat1/PopUps" unique_id=432866913 instance=ExtResource("5_njpkb")]
+position = Vector2(576, 256)
+nivel = 2
+
+[node name="PopUp7" parent="chat1/PopUps" unique_id=1427438915 instance=ExtResource("5_njpkb")]
+position = Vector2(576, 256)
+nivel = 2

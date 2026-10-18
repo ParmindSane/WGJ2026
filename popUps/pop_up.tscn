@@ -3,15 +3,70 @@
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_vvbuu"]
 [ext_resource type="Script" uid="uid://dqsqii6fyd4uq" path="res://popUps/pop_up.gd" id="2_3lr0a"]
 
-[node name="PopUp" type="Sprite2D" unique_id=872176486 node_paths=PackedStringArray("buttCerrar") groups=["popUp"]]
+[sub_resource type="LabelSettings" id="LabelSettings_3lr0a"]
+font_size = 10
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="PopUp" type="Sprite2D" unique_id=872176486 node_paths=PackedStringArray("botones", "tiempo") groups=["popUp"]]
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_vvbuu")
 script = ExtResource("2_3lr0a")
-buttCerrar = NodePath("Button")
+botones = NodePath("Botones")
+tiempo = NodePath("Tiempo")
+tiempoMargen = Vector2(5, 10)
 
-[node name="Button" type="Button" parent="." unique_id=782841030]
-offset_left = 32.0
+[node name="Botones" type="Control" parent="." unique_id=614271673]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
 offset_top = -64.0
-offset_right = 64.0
-offset_bottom = -33.0
+offset_right = -64.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Botones" unique_id=782841030]
+layout_mode = 0
+offset_left = 90.66667
+offset_top = 5.333336
+offset_right = 122.66667
+offset_bottom = 36.333336
 text = "X"
+
+[node name="Button2" type="Button" parent="Botones" unique_id=2027486434]
+layout_mode = 0
+offset_left = 15.999996
+offset_top = 16.0
+offset_right = 47.999996
+offset_bottom = 47.0
+text = "X"
+
+[node name="Button3" type="Button" parent="Botones" unique_id=1844005888]
+layout_mode = 0
+offset_top = 96.0
+offset_right = 53.333332
+offset_bottom = 127.0
+text = "->"
+
+[node name="Button4" type="Button" parent="Botones" unique_id=753993499]
+layout_mode = 0
+offset_left = 74.66667
+offset_top = 90.66667
+offset_right = 106.66667
+offset_bottom = 121.66667
+text = "X"
+
+[node name="Tiempo" type="Label" parent="." unique_id=1752531438]
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 55.0
+offset_bottom = 38.0
+text = "5"
+label_settings = SubResource("LabelSettings_3lr0a")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="Tiempo" unique_id=1002431736]

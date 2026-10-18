@@ -17,7 +17,7 @@ var popUpsCerrados := true
 
 func _ready():
 	opcionesNodo.dijoNo.connect(dijoNo)
-	popUpsNodos.cerrados.connect(func(): popUpsCerrados = true)
+	popUpsNodos.cerrados.connect(desbloquearNo)
 	resized.connect(scrollDown)
 	
 	var archivo = FileAccess.open(guion, FileAccess.READ)
@@ -56,11 +56,18 @@ func recibirMensajes():
 
 func dijoNo(_tanda: int):
 	print("Dijo que no y los popups están " + str(popUpsCerrados))
-	if _tanda == tanda && popUpsCerrados:
+	if !popUpsCerrados:
+		opcionesNodo.puedeDecirNo(false)
+	else:
 		opcionesNodo.hide()
 		
 		tanda += 1
 		recibirMensajes()
+	
+
+func desbloquearNo():
+	popUpsCerrados = true
+	opcionesNodo.puedeDecirNo(true)
 	
 
 func scrollDown():
