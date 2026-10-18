@@ -1,9 +1,4 @@
  ; 0.25 ; Spam
- ; 0.25 ; Spam
- ; 0.25 ; Spam
- ; 0.25 ; Spam
- ; 0.25 ; Spam
- ; 0.25 ; Spam
 ? ; Dale ; Ni en pedo
  ; 2 ; ¿segura?
  ; 1 ; Mirá que está re piola
