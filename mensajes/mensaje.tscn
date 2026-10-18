@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cvuhx2fgwq61k"]
 
 [ext_resource type="Script" uid="uid://byyfn452p5fbv" path="res://mensajes/mensaje.gd" id="1_6q5bo"]
-[ext_resource type="StyleBox" uid="uid://cmyxydyiioejq" path="res://mensajes/mensajeEnviado.tres" id="1_uuh8o"]
+[ext_resource type="StyleBox" uid="uid://cmyxydyiioejq" path="res://mensajes/mensajeRecibido.tres" id="1_uuh8o"]
 [ext_resource type="FontFile" uid="uid://d32h8ohgycswi" path="res://menu/arialroundedmtbold.ttf" id="3_qifni"]
 [ext_resource type="AudioStream" uid="uid://cyof5oqseq3pc" path="res://chatApp/assets/sonidos/mensajechat.ogg" id="3_tqpjn"]
 
@@ -13,7 +13,7 @@ font_color = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(150, 50)
 offset_right = 150.0
 offset_bottom = 50.0
-size_flags_horizontal = 8
+size_flags_horizontal = 0
 theme_override_styles/panel = ExtResource("1_uuh8o")
 script = ExtResource("1_6q5bo")
 label = NodePath("Label")
@@ -22,7 +22,6 @@ label = NodePath("Label")
 layout_mode = 2
 text = "mensaje (?"
 label_settings = SubResource("LabelSettings_tqpjn")
-horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=167585002]

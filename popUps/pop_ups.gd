@@ -22,9 +22,6 @@ func _ready():
 					return false)
 			)
 	
-	var p: PopUp = popupsPorNivel[0][0]
-	$ColorRect.position = p.selfSize/2
-	$ColorRect.size = p.spawnArea
 
 func dijoNo(_tanda: int):
 	if _tanda != tanda:
