@@ -23,6 +23,7 @@ SonidoBotones="*uid://j1b7weyp3rsu"
 
 window/size/viewport_height=1152
 window/size/mode=2
+window/size/resizable=false
 window/stretch/mode="canvas_items"
 
 [editor]

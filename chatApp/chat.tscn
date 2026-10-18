@@ -146,3 +146,4 @@ offset_bottom = 60.0
 scale = Vector2(1.2307695, 1.2307695)
 texture_normal = ExtResource("7_j22gf")
 texture_hover = ExtResource("8_auibd")
+metadata/buttSalir = true

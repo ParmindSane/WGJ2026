@@ -14,7 +14,7 @@ var buttActivo: BaseButton
 @export var sonido: AudioStreamPlayer
 
 @onready var R = RandomNumberGenerator.new()
-@onready var selfSize := get_rect().size
+@onready var selfSize := get_rect().size*1.2
 var spawnArea: Vector2
 
 func _ready():
@@ -60,7 +60,7 @@ signal cerrado(refe: Popup)
 func cerrar():
 	var i = butts.find(buttActivo) + 1
 	
-	if nivel == 1 && i < R.randi_range(3, butts.size()):
+	if nivel == 1 && i < R.randi_range(2, butts.size()):
 		buttActivo.hide()
 		buttActivo = butts[i]
 		buttActivo.show()
