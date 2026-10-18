@@ -7,7 +7,8 @@ var tanda: int
 
 @export var sonidos: AudioStreamPlayer
 
-@export var badEnding: PackedScene
+@export var badEnding: TheMaster.finales
+var finales := preload("res://endings/endings.tscn")
 
 func _ready():
 	buttYes.pressed.connect(goBadEnding)
@@ -27,7 +28,7 @@ func setOpciones(_yes: String, _no: String, _tanda: int):
 	
 
 func goBadEnding():
-	get_tree().change_scene_to_packed(badEnding)
+	TheMaster.goToScene(finales, badEnding)
 	
 
 signal dijoNo(id: String)

@@ -12,8 +12,11 @@ var popUpsCerrados := true
 @export var popUpsNodos: PopUps
 
 @export var scrollNodo: ScrollContainer
+@export var chatNodo: Node2D
 
 @export_file("*.txt") var guion: String
+
+signal finDeChat
 
 func _ready():
 	opcionesNodo.dijoNo.connect(dijoNo)
@@ -35,7 +38,7 @@ func _ready():
 				mensajesDatos[-1].push_back({"izquierda": false, "delay": columnas[1], "texto": columnas[2]})
 	archivo.close()
 	
-	recibirMensajes()
+	#recibirMensajes()
 	
 
 func recibirMensajes():
@@ -52,6 +55,9 @@ func recibirMensajes():
 	
 	if tanda < opciones.size():
 		opcionesNodo.setOpciones(opciones[tanda].yes, opciones[tanda].no, tanda)
+	else:
+		print("FIN DE CHAT")
+		finDeChat.emit()
 	
 
 func dijoNo(_tanda: int):

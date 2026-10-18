@@ -1,0 +1,7 @@
+ ; 0.25 ; Hola soy un nuevo chat
+? ; Dale ; Ni en pedo
+ ; 2 ; ¿segura?
+? ; Ok ; Te dije que no
+ ; 1 ; ¿pero segura segura?
+? ; bue ; >:/
+ ; 2 ; :c
