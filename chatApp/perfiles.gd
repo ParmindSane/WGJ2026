@@ -21,7 +21,13 @@ func _ready():
 		b.pressed.connect(switchChats.bind(i))
 	
 	switchChats(0)
-	print("Activo "+str(chatActivo)+": " + str(chatsControl[chatActivo]))
+	await get_tree().create_timer(float(2)).timeout
+	
+	if(chatActivo != chatVisible):
+		var s = buttStyle.duplicate()
+		s.bg_color = Color(0.95, 1.0, 0.0, 0.294)
+		butts[chatActivo].add_theme_stylebox_override("normal", s)
+	
 	chatsControl[chatActivo].recibirMensajes()
 	
 

@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://iqltbef7noh0" path="res://chatApp/assets/imagenes/UI-botoncerrar.png" id="7_j22gf"]
 [ext_resource type="Texture2D" uid="uid://bg8hig3poju2o" path="res://chatApp/assets/imagenes/UI-botoncerrar2.png" id="8_auibd"]
 [ext_resource type="AudioStream" uid="uid://4dxj2qorvrb6" path="res://chatApp/assets/sonidos/respuestas4.ogg" id="8_yebcd"]
+[ext_resource type="Script" uid="uid://ctf8tv201p2b8" path="res://menu/cerrar.gd" id="15_yebcd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yebcd"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -376,4 +377,5 @@ offset_bottom = 60.0
 scale = Vector2(1.2307695, 1.2307695)
 texture_normal = ExtResource("7_j22gf")
 texture_hover = ExtResource("8_auibd")
+script = ExtResource("15_yebcd")
 metadata/buttSalir = true

@@ -1,21 +1,101 @@
 [gd_scene format=3 uid="uid://ddkfme812poeb"]
 
-[node name="Menu" type="Node2D" unique_id=331481898]
+[ext_resource type="Texture2D" uid="uid://c2lg21c5oorfg" path="res://menu/assets/fondoMenu.jpeg" id="1_j0t7f"]
+[ext_resource type="Script" uid="uid://tcwg2l68ow5u" path="res://menu/menu.gd" id="1_svuvw"]
+[ext_resource type="StyleBox" uid="uid://chjpoeywys4f0" path="res://mensajes/mensajeEnviado.tres" id="2_6nwqt"]
+[ext_resource type="FontFile" uid="uid://d32h8ohgycswi" path="res://menu/arialroundedmtbold.ttf" id="3_juveg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pbjm4"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.24639995, 0.6, 0.192, 1)
+border_width_bottom = 4
+border_color = Color(0.267, 0.729, 0.188, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_svuvw"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.41066658, 1, 0.32, 1)
+border_width_bottom = 4
+border_color = Color(0.267, 0.729, 0.188, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_qe4n8"]
+font = ExtResource("3_juveg")
+font_color = Color(0, 0, 0, 1)
+
+[node name="Menu" type="Node2D" unique_id=331481898 node_paths=PackedStringArray("buttPlay")]
+script = ExtResource("1_svuvw")
+buttPlay = NodePath("Opciones/Button")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=354615917]
+layer = -10
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1900208469]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_j0t7f")
 
 [node name="Opciones" type="VBoxContainer" parent="." unique_id=1139170533]
-offset_left = 496.0
-offset_top = 184.0
-offset_right = 704.0
-offset_bottom = 320.0
+offset_left = 864.0
+offset_top = 416.0
+offset_right = 1072.0
+offset_bottom = 528.0
 size_flags_vertical = 3
+theme_override_constants/separation = 80
 metadata/_edit_group_ = true
 
 [node name="Button" type="Button" parent="Opciones" unique_id=406500008]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_juveg")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("2_6nwqt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pbjm4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_svuvw")
 text = "Jugar"
 
-[node name="Button2" type="Button" parent="Opciones" unique_id=102097921]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Créditos"
+[node name="Label" type="Label" parent="." unique_id=446334939]
+custom_maximum_size = Vector2(200, -1)
+offset_left = 864.0
+offset_top = 616.0
+offset_right = 1064.0
+offset_bottom = 1027.0
+text = "Sudoku.mail:
+Conceptualista y diseño de personajes
+
+Agoose:
+Musica, Sonido, UI
+
+Parmind Sane:
+Programación
+
+Clariche:
+Arte de personajes
+
+Lilo:
+Producción y narrativa
+
+Ele(spectro):
+Apoyo moral extraoficial"
+label_settings = SubResource("LabelSettings_qe4n8")
+autowrap_mode = 3

@@ -14,9 +14,6 @@ func connect_buttons(parent: Node) -> void:
 		if child is BaseButton:
 			var c: BaseButton = child
 			c.pressed.connect(_play_sound)
-			
-			if c.get_meta("buttSalir"):
-				c.pressed.connect(goToScene.bind(menu, finales.salir))
 		
 		if child.get_child_count() > 0:
 			connect_buttons(child)
@@ -37,9 +34,5 @@ enum finales {
 }
 func goToScene(_escena: PackedScene, _final: finales):
 	final = _final
-	
-	if final == finales.salir && DisplayServer.window_get_mode() != DisplayServer.WINDOW_MODE_WINDOWED:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-	else:
-		get_tree().change_scene_to_packed(_escena)
+	get_tree().change_scene_to_packed(_escena)
 	
