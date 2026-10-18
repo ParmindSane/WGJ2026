@@ -8,6 +8,8 @@ var popupsPorNivel = []
 var popupsVisibles: Array[Node]
 var mostrando := false
 
+var R := RandomNumberGenerator.new()
+
 func _ready():
 	opciones.dijoNo.connect(dijoNo)
 	
@@ -27,6 +29,7 @@ func mostrar():
 	for n in popupsPorNivel[tanda]:
 		n.cerrado.connect(cerrar)
 		n.mostrar()
+		await get_tree().create_timer(R.randf_range(0.1, 0.5)).timeout
 	popupsVisibles = popupsPorNivel[tanda]
 	
 

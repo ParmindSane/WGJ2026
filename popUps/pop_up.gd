@@ -11,6 +11,8 @@ var buttActivo: BaseButton
 @export var tiempoMargen: Vector2
 @onready var timer: Timer = tiempo.get_child(0)
 
+@export var sonido: AudioStreamPlayer
+
 @onready var R = RandomNumberGenerator.new()
 @onready var selfSize := get_rect().size
 var spawnArea: Vector2
@@ -35,10 +37,11 @@ func _ready():
 func _process(_delta):
 	if nivel == 2:
 		if !timer.is_stopped():
-			tiempo.text = str(ceil(timer.time_left))
+			tiempo.text = str(int(timer.time_left))
 	
 
 func mostrar():
+	sonido.play()
 	position = Vector2(R.randf_range(selfSize.x, spawnArea.x), R.randf_range(selfSize.y, spawnArea.y))
 	show()
 	

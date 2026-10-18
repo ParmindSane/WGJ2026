@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://byyfn452p5fbv" path="res://mensajes/mensaje.gd" id="1_6q5bo"]
 [ext_resource type="StyleBox" uid="uid://cmyxydyiioejq" path="res://mensajes/mensajeEnviado.tres" id="1_uuh8o"]
+[ext_resource type="AudioStream" uid="uid://cyof5oqseq3pc" path="res://chatApp/assets/sonidos/mensajechat.ogg" id="3_tqpjn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tqpjn"]
 font_color = Color(0, 0, 0, 1)
@@ -19,3 +20,7 @@ text = "mensaje (?"
 label_settings = SubResource("LabelSettings_tqpjn")
 horizontal_alignment = 2
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=167585002]
+stream = ExtResource("3_tqpjn")
+autoplay = true

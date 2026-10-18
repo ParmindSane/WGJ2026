@@ -22,6 +22,9 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_m8vcb")
 
+[node name="Musiquita" type="AudioStreamPlayer" parent="Fondo" unique_id=496487667]
+autoplay = true
+
 [node name="Perfiles" type="VBoxContainer" parent="." unique_id=1241352945]
 visible = false
 offset_left = 16.0

@@ -2,11 +2,7 @@ class_name Mensaje
 extends PanelContainer
 
 @export var derecha := true
-
-@export_group("Referencias internas")
 @export var label: Label
-
-#@onready var estilo: StyleBoxFlat = preload("res://mensajes/mensajeEnviado.tres")
 
 func setData(_texto: String, _derecha: bool):
 	label.text = _texto

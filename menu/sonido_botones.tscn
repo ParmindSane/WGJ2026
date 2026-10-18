@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://j1b7weyp3rsu"]
+
+[ext_resource type="Script" uid="uid://dw033buir24k1" path="res://menu/sonidoBotones.gd" id="1_7sms0"]
+[ext_resource type="AudioStream" uid="uid://be3yd546t1c2b" path="res://chatApp/assets/sonidos/mouseclick.ogg" id="2_1ma32"]
+
+[node name="SonidoBotones" type="Node" unique_id=398906659]
+script = ExtResource("1_7sms0")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=432715558]
+stream = ExtResource("2_1ma32")

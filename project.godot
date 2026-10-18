@@ -15,6 +15,10 @@ run/main_scene="uid://imal5mho24vc"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SonidoBotones="*uid://j1b7weyp3rsu"
+
 [display]
 
 window/size/viewport_height=1152

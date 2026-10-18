@@ -1,26 +1,55 @@
 [gd_scene format=3 uid="uid://bnkga81bkstr8"]
 
-[ext_resource type="StyleBox" uid="uid://cmyxydyiioejq" path="res://mensajes/mensajeEnviado.tres" id="1_att3v"]
 [ext_resource type="Script" uid="uid://dqsqii6fyd4uq" path="res://popUps/pop_up.gd" id="2_3lr0a"]
 [ext_resource type="Texture2D" uid="uid://bg8hig3poju2o" path="res://chatApp/assets/imagenes/UI-botoncerrar2.png" id="3_att3v"]
 [ext_resource type="Texture2D" uid="uid://iqltbef7noh0" path="res://chatApp/assets/imagenes/UI-botoncerrar.png" id="3_oilrx"]
+[ext_resource type="AudioStream" uid="uid://cuq52uutuatqs" path="res://chatApp/assets/sonidos/popup1.ogg" id="4_7dfnp"]
+[ext_resource type="AudioStream" uid="uid://dn2q3w6h7luws" path="res://chatApp/assets/sonidos/popup2.ogg" id="5_4ehkm"]
+[ext_resource type="AudioStream" uid="uid://c0c4phejsvp6t" path="res://chatApp/assets/sonidos/popup3.ogg" id="6_bqxhe"]
+[ext_resource type="AudioStream" uid="uid://jrwi5mhly4sv" path="res://chatApp/assets/sonidos/popup4.ogg" id="7_ksw5b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oilrx"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.36078432, 0.8627451, 0.2784314, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_color = Color(0.26666668, 0.7294118, 0.1882353, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0.26666668, 0.7294118, 0.1882353, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 5)
 
 [sub_resource type="LabelSettings" id="LabelSettings_3lr0a"]
 font_size = 10
 outline_size = 10
 outline_color = Color(0, 0, 0, 1)
 
-[node name="PopUp" type="PanelContainer" unique_id=300935196 node_paths=PackedStringArray("botones", "tiempo") groups=["popUp"]]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_oilrx"]
+streams_count = 4
+stream_0/stream = ExtResource("4_7dfnp")
+stream_1/stream = ExtResource("5_4ehkm")
+stream_2/stream = ExtResource("6_bqxhe")
+stream_3/stream = ExtResource("7_ksw5b")
+
+[node name="PopUp" type="PanelContainer" unique_id=300935196 node_paths=PackedStringArray("botones", "tiempo", "sonido") groups=["popUp"]]
 offset_left = -128.0
 offset_top = -128.0
 offset_right = 42.66667
 offset_bottom = 37.333344
 scale = Vector2(1.5, 1.5)
-theme_override_styles/panel = ExtResource("1_att3v")
+theme_override_styles/panel = SubResource("StyleBoxFlat_oilrx")
 script = ExtResource("2_3lr0a")
 botones = NodePath("Botones")
 tiempo = NodePath("Tiempo")
-tiempoMargen = Vector2(10, 15)
+tiempoMargen = Vector2(5, 10)
+sonido = NodePath("AudioStreamPlayer")
 
 [node name="Botones" type="Control" parent="." unique_id=614271673]
 layout_mode = 2
@@ -80,3 +109,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Timer" type="Timer" parent="Tiempo" unique_id=1002431736]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=725884090]
+stream = SubResource("AudioStreamRandomizer_oilrx")
