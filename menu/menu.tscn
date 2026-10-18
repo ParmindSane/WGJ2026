@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://ddkfme812poeb"]
 
-[ext_resource type="Texture2D" uid="uid://c2lg21c5oorfg" path="res://menu/assets/fondoMenu.jpeg" id="1_j0t7f"]
 [ext_resource type="Script" uid="uid://tcwg2l68ow5u" path="res://menu/menu.gd" id="1_svuvw"]
 [ext_resource type="StyleBox" uid="uid://chjpoeywys4f0" path="res://mensajes/mensajeEnviado.tres" id="2_6nwqt"]
+[ext_resource type="Texture2D" uid="uid://dqwwo70n4nina" path="res://menu/assets/MENU.png" id="2_pbjm4"]
 [ext_resource type="FontFile" uid="uid://d32h8ohgycswi" path="res://menu/arialroundedmtbold.ttf" id="3_juveg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pbjm4"]
@@ -33,7 +33,8 @@ corner_radius_bottom_left = 15
 
 [sub_resource type="LabelSettings" id="LabelSettings_qe4n8"]
 font = ExtResource("3_juveg")
-font_color = Color(0, 0, 0, 1)
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 1)
 
 [node name="Menu" type="Node2D" unique_id=331481898 node_paths=PackedStringArray("buttPlay")]
 script = ExtResource("1_svuvw")
@@ -48,13 +49,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_j0t7f")
+texture = ExtResource("2_pbjm4")
 
 [node name="Opciones" type="VBoxContainer" parent="." unique_id=1139170533]
 offset_left = 864.0
-offset_top = 416.0
+offset_top = 320.0
 offset_right = 1072.0
-offset_bottom = 528.0
+offset_bottom = 432.0
 size_flags_vertical = 3
 theme_override_constants/separation = 80
 metadata/_edit_group_ = true
@@ -76,10 +77,10 @@ text = "Jugar"
 
 [node name="Label" type="Label" parent="." unique_id=446334939]
 custom_maximum_size = Vector2(200, -1)
-offset_left = 864.0
-offset_top = 616.0
-offset_right = 1064.0
-offset_bottom = 1027.0
+offset_left = 936.0
+offset_top = 624.0
+offset_right = 1136.0
+offset_bottom = 1035.0
 text = "Sudoku.mail:
 Conceptualista y diseño de personajes
 
@@ -98,4 +99,6 @@ Producción y narrativa
 Ele(spectro):
 Apoyo moral extraoficial"
 label_settings = SubResource("LabelSettings_qe4n8")
+horizontal_alignment = 2
+vertical_alignment = 1
 autowrap_mode = 3

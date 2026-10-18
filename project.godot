@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-sonidoButts="*uid://j1b7weyp3rsu"
+GlobalSonido="*uid://j1b7weyp3rsu"
 
 [display]
 

@@ -1,10 +1,18 @@
 extends Node
 
-@onready var sonido: AudioStreamPlayer = $AudioStreamPlayer
+@export var butts: AudioStreamPlayer
+
+@export var musiquita: AudioStreamPlayer
+enum musiquitasNombres {
+	juego,
+	menu
+}
+@export var musiquitas: Dictionary[musiquitasNombres, AudioStream]
 
 func _ready() -> void:
 	connect_buttons(get_tree().root)
 	get_tree().node_added.connect(_on_node_added)
+	
 
 func connect_buttons(parent: Node) -> void:
 	for child in parent.get_children():
@@ -20,5 +28,11 @@ func _on_node_added(node: Node) -> void:
 		node.pressed.connect(_play_sound)
 	
 func _play_sound() -> void:
-	sonido.play()
+	butts.play()
+	
+
+func cambiarMusiquita(_mood: musiquitasNombres):
+	if musiquitas[_mood] != musiquita.stream:
+		musiquita.stream = musiquitas[_mood]
+		musiquita.play()
 	

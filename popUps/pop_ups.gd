@@ -21,6 +21,8 @@ func _ready():
 				else:
 					return false)
 			)
+		for b in popupsPorNivel[-1]:
+			b.cerrado.connect(cerrar)
 	
 
 func dijoNo(_tanda: int):
@@ -33,7 +35,6 @@ func mostrar():
 	mostrando = true
 	
 	for n in popupsPorNivel[tanda]:
-		n.cerrado.connect(cerrar)
 		n.mostrar()
 		await get_tree().create_timer(R.randf_range(0.1, 0.5)).timeout
 	popupsVisibles = popupsPorNivel[tanda]

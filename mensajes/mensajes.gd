@@ -51,6 +51,7 @@ var mensajeDelay := Vector2(2,3)
 func _process(_delta):
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
 		mensajeDelay = Vector2(0.05,0.05)
+	
 
 func recibirMensajes():
 	mensajeDelay = Vector2(2,3)

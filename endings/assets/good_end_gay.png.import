@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vw2xfwxptwwc"
-path="res://.godot/imported/badEnding2.jpeg-0b8de17b5a13e4a4bd153fbf0e916aeb.ctex"
+uid="uid://b4wmapm1jky32"
+path="res://.godot/imported/good_end_gay.png-162596af098b74ca01ea13a46ac3fd16.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://endings/assets/badEnding2.jpeg"
-dest_files=["res://.godot/imported/badEnding2.jpeg-0b8de17b5a13e4a4bd153fbf0e916aeb.ctex"]
+source_file="res://endings/assets/good_end_gay.png"
+dest_files=["res://.godot/imported/good_end_gay.png-162596af098b74ca01ea13a46ac3fd16.ctex"]
 
 [params]
 

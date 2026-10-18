@@ -5,5 +5,10 @@ extends Node2D
 var juegoEscena := preload("res://chatApp/chat.tscn")
 
 func _ready():
-	buttPlay.pressed.connect(func(): get_tree().change_scene_to_packed(juegoEscena))
+	buttPlay.pressed.connect(play)
+	GlobalSonido.cambiarMusiquita(GlobalSonido.musiquitasNombres.menu)
+
+func play():
+	GlobalSonido.cambiarMusiquita(GlobalSonido.musiquitasNombres.juego)
+	get_tree().change_scene_to_packed(juegoEscena)
 	

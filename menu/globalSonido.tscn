@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://j1b7weyp3rsu"]
+
+[ext_resource type="Script" uid="uid://dw033buir24k1" path="res://menu/globalSonido.gd" id="1_aakvk"]
+[ext_resource type="AudioStream" uid="uid://da43jxsdin5e2" path="res://chatApp/assets/SiCh@t.ogg" id="2_chgqq"]
+[ext_resource type="AudioStream" uid="uid://be3yd546t1c2b" path="res://chatApp/assets/sonidos/mouseclick.ogg" id="2_y2yoa"]
+[ext_resource type="AudioStream" uid="uid://bykhasfddci1l" path="res://chatApp/assets/Love is Not.ogg" id="3_y2yoa"]
+
+[node name="globalSonido" type="Node" unique_id=398906659 node_paths=PackedStringArray("butts", "musiquita")]
+script = ExtResource("1_aakvk")
+butts = NodePath("SonidoBotones")
+musiquita = NodePath("Musiquita")
+musiquitas = Dictionary[int, AudioStream]({
+0: ExtResource("2_chgqq"),
+1: ExtResource("3_y2yoa")
+})
+
+[node name="SonidoBotones" type="AudioStreamPlayer" parent="." unique_id=432715558]
+stream = ExtResource("2_y2yoa")
+
+[node name="Musiquita" type="AudioStreamPlayer" parent="." unique_id=803487342]

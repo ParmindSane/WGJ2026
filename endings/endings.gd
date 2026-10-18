@@ -24,19 +24,29 @@ func _ready():
 	
 
 func mostrar(_final: finales, _mensajes: Mensajes):
+	print("mostrar final " + str(_final))
+	
 	final = _final
 	rect.texture = texturas[final]
 	chatTerminado = _mensajes
+	
+	if final == finales.bueno1 || final == finales.bueno2 || finales.buenardo:
+		GlobalSonido.cambiarMusiquita(GlobalSonido.musiquitasNombres.menu)
+	else:
+		GlobalSonido.cambiarMusiquita(GlobalSonido.musiquitasNombres.juego)
 	
 	show()
 	
 
 func ocultar():
-	if final == finales.malo1 || final == finales.malo2:
-		get_tree().change_scene_to_file("res://menu/menu.tscn")
-	else:
-		print("Avisando que se cerró el final")
-		chatTerminado.terminarChat()
-	
 	hide()
+	print("ocultar ending " + str(final))
+	if final == finales.bueno1:
+		GlobalSonido.cambiarMusiquita(GlobalSonido.musiquitasNombres.juego)
+		chatTerminado.terminarChat()
+	elif final == finales.bueno2:
+		mostrar(finales.buenardo, chatTerminado)
+	else:
+		GlobalSonido.cambiarMusiquita(GlobalSonido.musiquitasNombres.menu)
+		get_tree().change_scene_to_file("res://menu/menu.tscn")
 	

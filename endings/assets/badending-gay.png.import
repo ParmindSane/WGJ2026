@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dt7bewnqkrmvt"
-path="res://.godot/imported/badEnding1.jpeg-293e331eb525328c9322b6412278fc23.ctex"
+uid="uid://stie56t18xhn"
+path="res://.godot/imported/badending-gay.png-deeaec7c4e4b92d4ad465fbc7afd7b44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://endings/assets/badEnding1.jpeg"
-dest_files=["res://.godot/imported/badEnding1.jpeg-293e331eb525328c9322b6412278fc23.ctex"]
+source_file="res://endings/assets/badending-gay.png"
+dest_files=["res://.godot/imported/badending-gay.png-deeaec7c4e4b92d4ad465fbc7afd7b44.ctex"]
 
 [params]
 

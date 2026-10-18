@@ -14,8 +14,15 @@
 [ext_resource type="Texture2D" uid="uid://iqltbef7noh0" path="res://chatApp/assets/imagenes/UI-botoncerrar.png" id="7_j22gf"]
 [ext_resource type="Texture2D" uid="uid://bg8hig3poju2o" path="res://chatApp/assets/imagenes/UI-botoncerrar2.png" id="8_auibd"]
 [ext_resource type="AudioStream" uid="uid://4dxj2qorvrb6" path="res://chatApp/assets/sonidos/respuestas4.ogg" id="8_yebcd"]
+[ext_resource type="Texture2D" uid="uid://by6fh12d34xbo" path="res://chatApp/assets/imagenes/UI-fotoperfil1.png" id="14_mx8wn"]
+[ext_resource type="Texture2D" uid="uid://bfj3tr4xw4yts" path="res://chatApp/assets/imagenes/UI-fotoperfil2.png" id="15_3kvbq"]
 [ext_resource type="Script" uid="uid://caxygqw13v2jl" path="res://endings/endings.gd" id="16_lufvb"]
 [ext_resource type="Texture2D" uid="uid://rn8wamci6hhu" path="res://chatApp/assets/imagenes/UI-fotoperfilprotagonista.png" id="17_2lg14"]
+[ext_resource type="Texture2D" uid="uid://scm3p4llhdg2" path="res://endings/assets/good_end_ace.png" id="19_1m488"]
+[ext_resource type="Texture2D" uid="uid://bvxa440ghm6fw" path="res://endings/assets/ending_buenardo.png" id="19_e2d6q"]
+[ext_resource type="Texture2D" uid="uid://b4wmapm1jky32" path="res://endings/assets/good_end_gay.png" id="20_e2d6q"]
+[ext_resource type="Texture2D" uid="uid://c3i1lhkjajgo7" path="res://endings/assets/badending-ace.png" id="21_qks6c"]
+[ext_resource type="Texture2D" uid="uid://stie56t18xhn" path="res://endings/assets/badending-gay.png" id="22_spcyy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yebcd"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -280,6 +287,18 @@ offset_bottom = 677.3334
 nivel = 2
 texto = "Nos vamos a ver perfectos!"
 
+[node name="TextureRect3" type="TextureRect" parent="Juego/chat1" unique_id=614082481]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 936.0
+offset_top = 181.065
+offset_right = 1104.0
+offset_bottom = 348.065
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_mx8wn")
+
 [node name="chat2" type="Node2D" parent="Juego" unique_id=1377035490]
 visible = false
 
@@ -322,7 +341,8 @@ script = ExtResource("2_i3wff")
 buttYes = NodePath("Yes")
 buttNo = NodePath("Nou")
 sonidos = NodePath("AudioStreamPlayer")
-badEnding = 2
+badEnding = 5
+goodEnding = 3
 metadata/_edit_group_ = true
 
 [node name="Yes" type="Button" parent="Juego/chat2/Opciones" unique_id=1197233659]
@@ -449,6 +469,18 @@ offset_bottom = 677.3334
 nivel = 2
 texto = "No te intereso entonces?"
 
+[node name="TextureRect4" type="TextureRect" parent="Juego/chat2" unique_id=1682542740]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 936.0
+offset_top = 181.065
+offset_right = 1101.0
+offset_bottom = 350.065
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("15_3kvbq")
+
 [node name="Cerrar" type="TextureButton" parent="." unique_id=288613811]
 offset_left = 1080.0
 offset_top = 8.0
@@ -463,11 +495,11 @@ metadata/buttSalir = true
 layer = 10
 script = ExtResource("16_lufvb")
 texturas = Dictionary[int, Texture2D]({
-1: null,
-2: null,
-3: null,
-4: null,
-5: null
+1: ExtResource("19_e2d6q"),
+2: ExtResource("19_1m488"),
+3: ExtResource("20_e2d6q"),
+4: ExtResource("21_qks6c"),
+5: ExtResource("22_spcyy")
 })
 rect = NodePath("TextureRect")
 salir = NodePath("Cerrar")
