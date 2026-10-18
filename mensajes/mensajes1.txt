@@ -1,7 +1,93 @@
- ; 0.25 ; Spam
-? ; Dale ; Ni en pedo
- ; 2 ; ¿segura?
-? ; Ok ; Te dije que no
- ; 1 ; ¿pero segura segura?
-? ; bue ; >:/
- ; 2 ; :c
+ ; Heyyyy ;)
+ ; Gracias por pasarme tu user! Es más cómodo hablar acá.
+e ; De nada!
+ ; Me alegro de que quisieras seguir conociéndonos, me pareciste muy interesante ^^
+ ; Bueno, en qué estábamos antes?
+e ; Me preguntaste algo, creo…
+ ; Ah, sí!
+ ; A qué te dedicás?
+e ; Trabajo en gastronomía
+ ; Ahh, cocinás? :3
+e ; No, no mucho, je
+e ; Atiendo a la gente en realidad
+ ; Ah, sos moza!
+ ; Bueno, está bien, yo me doy maña cocinando.
+ ; Suelo cocinar para mí, no me gusta la comida rápida ni tener que pedir que me traigan cosas…
+ ; Podría prepararte algo un día de estos ;)
+ ; Hago un lemon pie, te gusta?
+e ; No mucho…
+ ; Ah, eso porque no probaste el mío. Te va a encantar.
+e ; Bueno, y qué te gusta hacer?
+ ; Uh, varias cosas!
+ ; Suelo salir bastante a pasear
+ ; Me gusta organizar salidas con amigos
+ ; Busco lugares interesantes para ir a recorrer y preparo todo el día para hacer distintas cosas :)
+e ; Qué divertido eso!
+ ; Sí!
+ ; Aunque a veces mis amigos hacen lo que quieren
+ ; Llegan tarde, se pierden actividades, se distraen
+ ; Se ponen medio irrespetuosos…
+ ; Pero bueno!
+ ; Podría organizar algo para que hiciéramos juntos alguna vez ;)
+ ; Hay un parque por acá cerca que es precioso
+ ; Tienen un museo también, con un recorrido que se hace en tres etapas…
+ ; Averiguo cuándo es un buen día y te aviso!
+e ; Cambiando de tema, qué estás buscando ahora?
+e ; Digo, qué te interesa de conocer gente?
+ ; Una relación!
+ ; Qué más puedo buscar? jeje
+ ; Tengo muchos planes…
+ ; Me gustaría encontrarnos después de las clases y salir a tomar algo
+ ; Tener como una o dos citas a la semana, pensar actividades, esas cosas! ;)
+e ; Ah, estaría bueno, pero suelo cursar de noche…
+ ; Ahora capaz te parece mucho, pero cuando entremos más en confianza vas a ver que hasta va a ser poco jeje
+ ; De eso se trata estar en pareja, de que nos vean juntos
+ ; Si vamos a estar cada uno en la suya, no tiene mucho sentido…
+e ; Pero cada uno tiene su vida
+e ; Más allá del otro…
+ ; No?
+ ; La vida se construye con el otro, no?
+ ; Igual no te preocupes
+ ; Cuando nos vayamos conociendo más vas a ver que va a ser divertido!
+ ; Che! Estaba pensando…
+ ; Aparte
+ ; Estaría lindo vernos mañana para charlar personalmente, no? ;)
+ ; Conozco un Cat Cafe acá, es muy lindo
+ ; Y después de eso te puedo hacer un recorrido por mi facultad, es linda
+ ; Es mejor hablar cara a cara!
+
+? ; Sí, me parece bien. ; Me parece que no…
+
+p ; Dale, te prometo que son lugares re lindos!
+p ; Nos vamos a entender mejor cara a cara
+
+? ; Bueno, dale, nos vemos mañana. ; Es que se me complica mucho…
+
+p ; Te puedo presentar a mis amigos, les vas a caer genial
+p ; Nos vamos a ver perfectos!
+p ; Va a ser divertido!
+
+? ; Está bien, vamos mañana. ; Te estoy diciendo que no.
+
+ ; Bueno, che! Tampoco hace falta que me hables así
+ ; Te estoy proponiendo algo lindo…
+ ; No es para tanto
+e ; No me estabas escuchando
+ ; Me parece muy injusto
+ ; Tenía muchos planes, me parecía que podíamos llegar a algo muy hermoso
+ ; No sé por qué me hacés esto
+e ; No puedo
+e ; Y tampoco quiero
+ ; Y ahora yo qué hago?
+ ; Me vas a dejar tirado como si nada?
+ ; Sólo porque no te gustó la invitación?
+ ; Te das cuenta de que eso me deja muy mal a mí?
+ ; No me vas a dar la oportunidad de salir una vez al menos?
+ ; Que nos vean juntos una vez?
+ ; los chismes no van a parar si no estamos juntos
+ ; ¿no querés al menos intentar?
+ ; una vez, que nos vean juntos una vez
+e ; Seguís sin escucharme, no estoy diciendo nada de eso
+e ; Pero da igual, no me interesa seguir hablando
+ ; Una sola vez, dame una oportunidad
+e ; Dije que NO

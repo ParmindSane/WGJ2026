@@ -11,6 +11,9 @@ var buttActivo: BaseButton
 @export var tiempoMargen: Vector2
 @onready var timer: Timer = tiempo.get_child(0)
 
+@export var cartel: Label
+@export var texto: String
+
 @export var sonido: AudioStreamPlayer
 
 @onready var R = RandomNumberGenerator.new()
@@ -30,6 +33,8 @@ func _ready():
 	buttActivo.show()
 	
 	tiempo.hide()
+	
+	cartel.text = texto
 	
 	hide()
 	

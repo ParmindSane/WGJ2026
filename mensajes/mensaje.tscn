@@ -11,6 +11,7 @@ font_color = Color(0, 0, 0, 1)
 
 [node name="Mensaje" type="PanelContainer" unique_id=402123576 node_paths=PackedStringArray("label")]
 custom_minimum_size = Vector2(150, 50)
+custom_maximum_size = Vector2(240, -1)
 offset_right = 150.0
 offset_bottom = 50.0
 size_flags_horizontal = 0
@@ -23,6 +24,7 @@ layout_mode = 2
 text = "mensaje (?"
 label_settings = SubResource("LabelSettings_tqpjn")
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=167585002]
 stream = ExtResource("3_tqpjn")

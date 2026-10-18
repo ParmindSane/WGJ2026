@@ -2,15 +2,6 @@ extends Node
 
 @onready var sonido: AudioStreamPlayer = $AudioStreamPlayer
 
-var menu := preload("res://menu/menu.tscn")
-
-enum finales {
-	bueno,
-	malo1,
-	malo2
-}
-var final := finales.bueno
-
 func _ready() -> void:
 	connect_buttons(get_tree().root)
 	get_tree().node_added.connect(_on_node_added)
@@ -30,9 +21,4 @@ func _on_node_added(node: Node) -> void:
 	
 func _play_sound() -> void:
 	sonido.play()
-	
-
-func goToScene(_escena: PackedScene, _final: finales):
-	final = _final
-	get_tree().change_scene_to_packed(_escena)
 	

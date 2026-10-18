@@ -7,11 +7,11 @@ var tanda: int
 
 @export var sonidos: AudioStreamPlayer
 
-@export var badEnding: TheMaster.finales
-var finales := preload("res://endings/endings.tscn")
+@export var badEnding: Endings.finales
+@export var goodEnding: Endings.finales
 
 func _ready():
-	buttYes.pressed.connect(goBadEnding)
+	buttYes.pressed.connect(decirYes)
 	buttNo.pressed.connect(decirNo)
 	
 	hide()
@@ -27,11 +27,12 @@ func setOpciones(_yes: String, _no: String, _tanda: int):
 	show()
 	
 
-func goBadEnding():
-	TheMaster.goToScene(finales, badEnding)
+signal dijoYes()
+func decirYes():
+	dijoYes.emit()
 	
 
-signal dijoNo(id: String)
+signal dijoNo(tanda: String)
 func decirNo():
 	dijoNo.emit(tanda)
 	

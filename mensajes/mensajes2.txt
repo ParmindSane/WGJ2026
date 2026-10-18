@@ -1,7 +1,87 @@
- ; 0.25 ; Hola soy un nuevo chat
-? ; Dale ; Ni en pedo
- ; 2 ; ¿segura?
-? ; Ok ; Te dije que no
- ; 1 ; ¿pero segura segura?
-? ; bue ; >:/
- ; 2 ; :c
+ ; Hola
+ ; Estaba ocupado
+ ; Bueno, me alegro de que hablemos por acá ahora
+ ; Es más sencillo
+e ; Sí! Más cómodo
+e ; Qué contás? Qué estabas haciendo?
+ ; Nada
+ ; Escuchando música
+e ; Ah! Qué escuchabas?
+ ; Soundtracks de juegos
+ ; Hay un par que me gustan mucho
+ ; Y los escucho medio en loop
+e ; Y qué te gusta hacer aparte de escuchar música?
+ ; Me gustan mucho los gatos
+ ; Cuando tengo tiempo, salgo a dar una vuelta a la cuadra
+ ; Y les doy de comer a los que hay por el barrio
+ ; Los llevo a castrar también si es necesario
+e ; Awww
+e ; Yo estudio veterinaria!
+e ; Trabajo mucho con gatitos, me encantan
+ ; Podrías venir a conocerlos alguna vez
+ ; Hay muchos por mi casa
+ ; Bueno, y cuándo estás libre?
+e ; Eh… No sé bien…
+e ; Tengo algunos parciales esta semana…
+ ; Cuando tengas un rato
+ ; Nos podemos ver en algún lado
+e ; Como en dónde?
+ ; No sé
+ ; Al cine?
+ ; No sé bien qué hay ahora
+ ; O a comer algo
+ ; Yo invito
+e ; Al cine capaz puede ser…
+ ; Me fijo qué hay en la cartelera
+ ; Ah
+ ; Podemos ir a casa después 
+ ; Creo que no hay problema
+e ; Eh…
+e ; No sé 
+e ; Por lo pronto vamos al cine
+e ; No sé si tengo ganas, no te conozco mucho
+ ; Yo tampoco
+ ; Pero bueno
+ ; Es una cita, no?
+e ; Sí?
+ ; Bueno, por eso…
+ ; Es lo que toca
+
+? ; Ok. Puedo el martes! ; No, no creo 
+
+p ; Otro día?
+p ; Podemos ir a tomar algo capaz?
+p ; O a tu casa, si preferís
+
+? ; Bueno, sí ; No, no te parece mucho?
+
+p ; Yo invito, no te preocupes por eso
+p ; De esto se tratan las relaciones…
+p ; Es lo que hacen todos, no?
+p ; No te intereso entonces?
+
+? ; Bueno, bueno. Nos vemos mañana ; No. No quiero.
+
+ ; Eh?
+e ; Ni nos conocemos
+e ; No quiero quedarme a dormir en tu casa ya
+e ; No tengo ganas
+ ; Pero para qué me escribiste entonces?
+ ; Pensé que te interesaba
+e ; Sí, me gustó tu bio
+e ; Pero no quiere decir que quiera sexo ya
+ ; La app es para eso
+ ; No?
+e ; No
+e ; No necesariamente
+e ; No tengo ganas
+ ; Nadie tiene ganas
+ ; Pero bueno, es así
+e ; Cómo?
+e ; Estamos buscando cosas distintas, no nos estamos entendiendo
+ ; Qué buscabas entonces?
+e ; Conocer gente, una relación eventualmente…
+ ; Y en qué consiste
+ ; Hay bastante más que sexo en una relación
+ ; Pero bueno, si es eso lo que te interesa, vas a tener que buscar a otra persona
+ ; No me interesa

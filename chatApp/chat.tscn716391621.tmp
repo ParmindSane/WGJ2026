@@ -1,0 +1,491 @@
+[gd_scene format=3 uid="uid://imal5mho24vc"]
+
+[ext_resource type="Script" uid="uid://dpku6e4f14sfb" path="res://mensajes/mensajes.gd" id="1_i3wff"]
+[ext_resource type="Texture2D" uid="uid://biqfvx6fmikak" path="res://chatApp/assets/imagenes/UI-bg.png" id="1_m8vcb"]
+[ext_resource type="Script" uid="uid://pnowemy2yj4m" path="res://chatApp/perfiles.gd" id="2_gl1uv"]
+[ext_resource type="Script" uid="uid://nb4l1ksvvt0g" path="res://mensajes/opciones.gd" id="2_i3wff"]
+[ext_resource type="StyleBox" uid="uid://du02jguglm2v2" path="res://chatApp/buttPerfil.tres" id="3_gl1uv"]
+[ext_resource type="Script" uid="uid://dk566m5b23sak" path="res://popUps/pop_ups.gd" id="4_xuhkm"]
+[ext_resource type="AudioStream" uid="uid://l5y7cx8w64bh" path="res://chatApp/assets/sonidos/respuestas1.ogg" id="5_12a36"]
+[ext_resource type="FontFile" uid="uid://d32h8ohgycswi" path="res://menu/arialroundedmtbold.ttf" id="5_gl1uv"]
+[ext_resource type="PackedScene" uid="uid://bnkga81bkstr8" path="res://popUps/pop_up.tscn" id="5_njpkb"]
+[ext_resource type="StyleBox" uid="uid://chjpoeywys4f0" path="res://mensajes/mensajeEnviado.tres" id="5_q37u3"]
+[ext_resource type="AudioStream" uid="uid://b4k6yf2k8x4o" path="res://chatApp/assets/sonidos/respuestas2.ogg" id="6_q37u3"]
+[ext_resource type="Texture2D" uid="uid://iqltbef7noh0" path="res://chatApp/assets/imagenes/UI-botoncerrar.png" id="7_j22gf"]
+[ext_resource type="Texture2D" uid="uid://bg8hig3poju2o" path="res://chatApp/assets/imagenes/UI-botoncerrar2.png" id="8_auibd"]
+[ext_resource type="AudioStream" uid="uid://4dxj2qorvrb6" path="res://chatApp/assets/sonidos/respuestas4.ogg" id="8_yebcd"]
+[ext_resource type="Script" uid="uid://caxygqw13v2jl" path="res://endings/endings.gd" id="16_lufvb"]
+[ext_resource type="Texture2D" uid="uid://rn8wamci6hhu" path="res://chatApp/assets/imagenes/UI-fotoperfilprotagonista.png" id="17_2lg14"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yebcd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gl1uv"]
+bg_color = Color(0.6, 0.7666667, 1, 0.29411766)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lufvb"]
+bg_color = Color(0.6, 0.7666667, 1, 0.29411766)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_12a36"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.24639995, 0.6, 0.192, 1)
+border_width_bottom = 4
+border_color = Color(0.267, 0.729, 0.188, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q37u3"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.41066658, 1, 0.32, 1)
+border_width_bottom = 4
+border_color = Color(0.267, 0.729, 0.188, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_12a36"]
+playback_mode = 2
+streams_count = 3
+stream_0/stream = ExtResource("5_12a36")
+stream_1/stream = ExtResource("6_q37u3")
+stream_2/stream = ExtResource("8_yebcd")
+
+[node name="Node2D" type="Node2D" unique_id=945820080]
+
+[node name="Fondo" type="CanvasLayer" parent="." unique_id=521798269]
+layer = -5
+
+[node name="TextureRect" type="TextureRect" parent="Fondo" unique_id=678158611]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_m8vcb")
+
+[node name="TextureRect2" type="TextureRect" parent="Fondo" unique_id=312223421]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 936.0
+offset_top = 824.0
+offset_right = -40.0
+offset_bottom = -152.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("17_2lg14")
+
+[node name="Musiquita" type="AudioStreamPlayer" parent="Fondo" unique_id=496487667]
+autoplay = true
+
+[node name="Juego" type="CanvasLayer" parent="." unique_id=899308788]
+
+[node name="Perfiles" type="VBoxContainer" parent="Juego" unique_id=1241352945 node_paths=PackedStringArray("chatsControl", "butts", "final", "salir")]
+offset_left = 40.0
+offset_top = 160.0
+offset_right = 264.0
+offset_bottom = 304.0
+size_flags_vertical = 3
+script = ExtResource("2_gl1uv")
+chatsControl = [NodePath("../chat1/ScrollContainer/MarginContainer/Mensajes"), NodePath("../chat2/ScrollContainer/MarginContainer/Mensajes")]
+butts = [NodePath("Button"), NodePath("Button2")]
+final = NodePath("../../Endings")
+salir = NodePath("../../Cerrar")
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="Juego/Perfiles" unique_id=969651375]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_yebcd")
+theme_override_styles/pressed = ExtResource("3_gl1uv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gl1uv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_lufvb")
+
+[node name="Button2" type="Button" parent="Juego/Perfiles" unique_id=1137470664]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_yebcd")
+theme_override_styles/pressed = ExtResource("3_gl1uv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gl1uv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_lufvb")
+
+[node name="chat1" type="Node2D" parent="Juego" unique_id=2131170475]
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Juego/chat1" unique_id=1634922461]
+offset_left = 336.0
+offset_top = 176.0
+offset_right = 904.0
+offset_bottom = 840.0
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Juego/chat1/ScrollContainer" unique_id=698605801]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="Mensajes" type="VBoxContainer" parent="Juego/chat1/ScrollContainer/MarginContainer" unique_id=1376293297 node_paths=PackedStringArray("opcionesNodo", "popUpsNodos", "scrollNodo", "chatNodo", "finalesNodo")]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("1_i3wff")
+opcionesNodo = NodePath("../../../Opciones")
+popUpsNodos = NodePath("../../../PopUps")
+scrollNodo = NodePath("../..")
+chatNodo = NodePath("../../..")
+guion = "res://mensajes/mensajes1.txt"
+finalesNodo = NodePath("../../../../../Endings")
+
+[node name="Opciones" type="VBoxContainer" parent="Juego/chat1" unique_id=435834509 node_paths=PackedStringArray("buttYes", "buttNo", "sonidos")]
+offset_left = 480.0
+offset_top = 880.0
+offset_right = 736.0
+offset_bottom = 1008.0
+size_flags_vertical = 3
+script = ExtResource("2_i3wff")
+buttYes = NodePath("Yes")
+buttNo = NodePath("Nou")
+sonidos = NodePath("AudioStreamPlayer")
+badEnding = 4
+goodEnding = 2
+metadata/_edit_group_ = true
+
+[node name="Yes" type="Button" parent="Juego/chat1/Opciones" unique_id=1028435532]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_gl1uv")
+theme_override_styles/normal = ExtResource("5_q37u3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_12a36")
+theme_override_styles/hover = SubResource("StyleBoxFlat_q37u3")
+text = "opcion 1"
+
+[node name="Nou" type="Button" parent="Juego/chat1/Opciones" unique_id=1605746185]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_gl1uv")
+theme_override_styles/normal = ExtResource("5_q37u3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_12a36")
+theme_override_styles/hover = SubResource("StyleBoxFlat_q37u3")
+theme_override_styles/disabled = ExtResource("5_q37u3")
+text = "opcion 1"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Juego/chat1/Opciones" unique_id=1634630468]
+stream = SubResource("AudioStreamRandomizer_12a36")
+volume_db = 10.0
+
+[node name="PopUps" type="Node2D" parent="Juego/chat1" unique_id=944412059 node_paths=PackedStringArray("opciones")]
+script = ExtResource("4_xuhkm")
+opciones = NodePath("../Opciones")
+
+[node name="PopUp" parent="Juego/chat1/PopUps" unique_id=872176486 instance=ExtResource("5_njpkb")]
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
+texto = "Dale, te prometo que son lugares re lindos!"
+
+[node name="PopUp8" parent="Juego/chat1/PopUps" unique_id=300935196 instance=ExtResource("5_njpkb")]
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
+texto = "Va a ser divertido!"
+
+[node name="PopUp2" parent="Juego/chat1/PopUps" unique_id=984780521 instance=ExtResource("5_njpkb")]
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
+nivel = 1
+texto = "Es por la facu? Yo te ayudo a estudiar después!"
+
+[node name="PopUp3" parent="Juego/chat1/PopUps" unique_id=742094352 instance=ExtResource("5_njpkb")]
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
+nivel = 1
+texto = "Va a estar muy lindo"
+
+[node name="PopUp4" parent="Juego/chat1/PopUps" unique_id=821169681 instance=ExtResource("5_njpkb")]
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
+nivel = 1
+texto = "Nos vamos a entender mejor cara a cara"
+
+[node name="PopUp9" parent="Juego/chat1/PopUps" unique_id=1207424419 instance=ExtResource("5_njpkb")]
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
+nivel = 1
+texto = "Podés hacerte un ratito"
+
+[node name="PopUp5" parent="Juego/chat1/PopUps" unique_id=1412076695 instance=ExtResource("5_njpkb")]
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
+nivel = 2
+texto = "Cómo nos vamos a conocer sin vernos?"
+
+[node name="PopUp6" parent="Juego/chat1/PopUps" unique_id=432866913 instance=ExtResource("5_njpkb")]
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
+nivel = 2
+texto = "Te puedo presentar a mis amigos, les vas a caer genial"
+
+[node name="PopUp7" parent="Juego/chat1/PopUps" unique_id=1427438915 instance=ExtResource("5_njpkb")]
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
+nivel = 2
+texto = "Nos vamos a ver perfectos!"
+
+[node name="chat2" type="Node2D" parent="Juego" unique_id=1377035490]
+visible = false
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Juego/chat2" unique_id=1021205608]
+offset_left = 336.0
+offset_top = 176.0
+offset_right = 904.0
+offset_bottom = 840.0
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Juego/chat2/ScrollContainer" unique_id=717494992]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="Mensajes" type="VBoxContainer" parent="Juego/chat2/ScrollContainer/MarginContainer" unique_id=774825095 node_paths=PackedStringArray("opcionesNodo", "popUpsNodos", "scrollNodo", "chatNodo", "finalesNodo")]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("1_i3wff")
+opcionesNodo = NodePath("../../../Opciones")
+popUpsNodos = NodePath("../../../PopUps")
+scrollNodo = NodePath("../..")
+chatNodo = NodePath("../../..")
+guion = "res://mensajes/mensajes2.txt"
+finalesNodo = NodePath("../../../../../Endings")
+
+[node name="Opciones" type="VBoxContainer" parent="Juego/chat2" unique_id=1861354407 node_paths=PackedStringArray("buttYes", "buttNo", "sonidos")]
+offset_left = 480.0
+offset_top = 880.0
+offset_right = 736.0
+offset_bottom = 1008.0
+size_flags_vertical = 3
+script = ExtResource("2_i3wff")
+buttYes = NodePath("Yes")
+buttNo = NodePath("Nou")
+sonidos = NodePath("AudioStreamPlayer")
+badEnding = 2
+metadata/_edit_group_ = true
+
+[node name="Yes" type="Button" parent="Juego/chat2/Opciones" unique_id=1197233659]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_gl1uv")
+theme_override_styles/normal = ExtResource("5_q37u3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_12a36")
+theme_override_styles/hover = SubResource("StyleBoxFlat_q37u3")
+text = "opcion 1"
+
+[node name="Nou" type="Button" parent="Juego/chat2/Opciones" unique_id=336915165]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_gl1uv")
+theme_override_styles/normal = ExtResource("5_q37u3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_12a36")
+theme_override_styles/hover = SubResource("StyleBoxFlat_q37u3")
+theme_override_styles/disabled = ExtResource("5_q37u3")
+text = "opcion 1"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Juego/chat2/Opciones" unique_id=889012033]
+stream = SubResource("AudioStreamRandomizer_12a36")
+volume_db = 10.0
+
+[node name="PopUps" type="Node2D" parent="Juego/chat2" unique_id=503870987 node_paths=PackedStringArray("opciones")]
+script = ExtResource("4_xuhkm")
+opciones = NodePath("../Opciones")
+
+[node name="PopUp" parent="Juego/chat2/PopUps" unique_id=58474071 instance=ExtResource("5_njpkb")]
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
+texto = "Otro día?"
+
+[node name="PopUp2" parent="Juego/chat2/PopUps" unique_id=480641654 instance=ExtResource("5_njpkb")]
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
+texto = "Pero qué hacemos si no?"
+
+[node name="PopUp3" parent="Juego/chat2/PopUps" unique_id=1024671763 instance=ExtResource("5_njpkb")]
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
+texto = "Yo tampoco tengo ganas, pero no es el punto"
+
+[node name="PopUp4" parent="Juego/chat2/PopUps" unique_id=1576509877 instance=ExtResource("5_njpkb")]
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
+nivel = 1
+texto = "Y el jueves a la noche?"
+
+[node name="PopUp5" parent="Juego/chat2/PopUps" unique_id=1686323186 instance=ExtResource("5_njpkb")]
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
+nivel = 1
+texto = "Podemos ir a tomar algo capaz?"
+
+[node name="PopUp6" parent="Juego/chat2/PopUps" unique_id=1340342157 instance=ExtResource("5_njpkb")]
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
+nivel = 1
+texto = "O a tu casa, si preferís"
+
+[node name="PopUp7" parent="Juego/chat2/PopUps" unique_id=592984881 instance=ExtResource("5_njpkb")]
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
+nivel = 1
+texto = "Yo invito, no te preocupes por eso"
+
+[node name="PopUp8" parent="Juego/chat2/PopUps" unique_id=2001076825 instance=ExtResource("5_njpkb")]
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
+nivel = 2
+texto = "Qué querías hacer entonces?"
+
+[node name="PopUp9" parent="Juego/chat2/PopUps" unique_id=36026332 instance=ExtResource("5_njpkb")]
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
+nivel = 2
+texto = "De esto se tratan las relaciones…"
+
+[node name="PopUp10" parent="Juego/chat2/PopUps" unique_id=1541097747 instance=ExtResource("5_njpkb")]
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
+nivel = 2
+texto = "Es lo que hacen todos, no?"
+
+[node name="PopUp11" parent="Juego/chat2/PopUps" unique_id=1558010371 instance=ExtResource("5_njpkb")]
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
+nivel = 2
+texto = "No te intereso entonces?"
+
+[node name="Cerrar" type="TextureButton" parent="." unique_id=288613811]
+offset_left = 1080.0
+offset_top = 8.0
+offset_right = 1132.0
+offset_bottom = 60.0
+scale = Vector2(1.2307695, 1.2307695)
+texture_normal = ExtResource("7_j22gf")
+texture_hover = ExtResource("8_auibd")
+metadata/buttSalir = true
+
+[node name="Endings" type="CanvasLayer" parent="." unique_id=525813406 node_paths=PackedStringArray("rect", "salir")]
+layer = 10
+script = ExtResource("16_lufvb")
+texturas = Dictionary[int, Texture2D]({
+1: null,
+2: null,
+3: null,
+4: null,
+5: null
+})
+rect = NodePath("TextureRect")
+salir = NodePath("Cerrar")
+
+[node name="TextureRect" type="TextureRect" parent="Endings" unique_id=989954483]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Cerrar" type="TextureButton" parent="Endings" unique_id=1760437814]
+offset_left = 1032.0
+offset_top = 8.0
+offset_right = 1123.0
+offset_bottom = 99.0
+scale = Vector2(1.2307695, 1.2307695)
+texture_normal = ExtResource("7_j22gf")
+texture_hover = ExtResource("8_auibd")
+stretch_mode = 5
+metadata/buttSalir = true

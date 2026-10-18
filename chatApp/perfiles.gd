@@ -9,9 +9,13 @@ extends VBoxContainer
 var buttStyle := preload("res://chatApp/buttPerfil.tres")
 var chatVisible := 0
 
-var final = preload("res://endings/endings.tscn")
+@export var final: Endings
+
+@export var salir: BaseButton
 
 func _ready():
+	salir.pressed.connect(func(): DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED))
+	
 	for c in chatsControl:
 		c.finDeChat.connect(finDeChat)
 		chats.push_back(c.chatNodo)
@@ -40,7 +44,7 @@ func finDeChat():
 		s.bg_color = Color(0.95, 1.0, 0.0, 0.294)
 		butts[chatActivo].add_theme_stylebox_override("normal", s)
 	else:
-		TheMaster.goToScene(final, TheMaster.finales.bueno)
+		final.mostrar(Endings.finales.buenardo, chatsControl[chatActivo])
 	
 
 func switchChats(_i: int):

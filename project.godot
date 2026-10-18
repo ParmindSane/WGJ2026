@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-TheMaster="*uid://j1b7weyp3rsu"
+sonidoButts="*uid://j1b7weyp3rsu"
 
 [display]
 
