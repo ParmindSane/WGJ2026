@@ -14,12 +14,12 @@ var buttActivo: BaseButton
 @export var sonido: AudioStreamPlayer
 
 @onready var R = RandomNumberGenerator.new()
-@onready var selfSize := get_rect().size*1.2
+@onready var selfSize := get_rect().size
 var spawnArea: Vector2
 
 func _ready():
 	var windowSize = get_viewport_rect().size
-	spawnArea = windowSize - selfSize
+	spawnArea = windowSize - selfSize*1.75
 	
 	for b in butts:
 		b.pressed.connect(cerrar)
@@ -42,7 +42,7 @@ func _process(_delta):
 
 func mostrar():
 	sonido.play()
-	position = Vector2(R.randf_range(selfSize.x, spawnArea.x), R.randf_range(selfSize.y, spawnArea.y))
+	position = Vector2(R.randf_range(selfSize.x/2, spawnArea.x), R.randf_range(selfSize.y/2, spawnArea.y))
 	show()
 	
 	if nivel == 2:

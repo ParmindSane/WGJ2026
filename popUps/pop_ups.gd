@@ -14,8 +14,17 @@ func _ready():
 	opciones.dijoNo.connect(dijoNo)
 	
 	for i in range(3):
-		popupsPorNivel.push_back(get_children().filter(func(p: PopUp): return p.nivel <= i))
-	print(popupsPorNivel)
+		popupsPorNivel.push_back(get_children().filter(
+			func(p: Node): 
+				if p is PopUp:
+					return p.nivel <= i
+				else:
+					return false)
+			)
+	
+	var p: PopUp = popupsPorNivel[0][0]
+	$ColorRect.position = p.selfSize/2
+	$ColorRect.size = p.spawnArea
 
 func dijoNo(_tanda: int):
 	if _tanda != tanda:

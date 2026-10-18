@@ -5,6 +5,8 @@ extends VBoxContainer
 @export var buttNo: Button
 var tanda: int
 
+@export var sonidos: AudioStreamPlayer
+
 @export var badEnding: PackedScene
 
 func _ready():
@@ -18,6 +20,8 @@ func setOpciones(_yes: String, _no: String, _tanda: int):
 	buttYes.text = _yes
 	buttNo.text = _no
 	tanda = _tanda
+	
+	sonidos.play()
 	
 	show()
 	

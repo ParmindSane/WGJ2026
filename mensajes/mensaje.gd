@@ -13,7 +13,7 @@ func setData(_texto: String, _derecha: bool):
 		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
 		
 		var estilo = get_theme_stylebox("panel").duplicate()
-		estilo.bg_color = Color(1.0, 1.0, 1.0, 1.0)
-		estilo.shadow_color = Color(0.537, 0.757, 1.0)
+		estilo.bg_color = Color(0.361, 0.863, 0.278)
+		estilo.shadow_color = Color(0.267, 0.729, 0.188)
 		add_theme_stylebox_override("panel", estilo)
 	
