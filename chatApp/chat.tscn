@@ -149,6 +149,7 @@ script = ExtResource("2_i3wff")
 buttYes = NodePath("Yes")
 buttNo = NodePath("Nou")
 sonidos = NodePath("AudioStreamPlayer")
+badEnding = 1
 metadata/_edit_group_ = true
 
 [node name="Yes" type="Button" parent="chat1/Opciones" unique_id=1028435532]
@@ -279,7 +280,7 @@ script = ExtResource("2_i3wff")
 buttYes = NodePath("Yes")
 buttNo = NodePath("Nou")
 sonidos = NodePath("AudioStreamPlayer")
-badEnding = 1
+badEnding = 2
 metadata/_edit_group_ = true
 
 [node name="Yes" type="Button" parent="chat2/Opciones" unique_id=1197233659]

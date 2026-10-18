@@ -9,6 +9,7 @@ extends Node2D
 func _ready():
 	rect.texture = finales[TheMaster.final]
 	
+	salir.hide()
 	await get_tree().create_timer(float(2)).timeout
 	salir.show()
 	
