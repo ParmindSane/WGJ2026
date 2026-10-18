@@ -38,8 +38,6 @@ func _ready():
 				mensajesDatos[-1].push_back({"izquierda": false, "delay": columnas[1], "texto": columnas[2]})
 	archivo.close()
 	
-	#recibirMensajes()
-	
 
 func recibirMensajes():
 	for d in mensajesDatos[tanda]:

@@ -21,14 +21,18 @@ func _ready():
 		b.pressed.connect(switchChats.bind(i))
 	
 	switchChats(0)
+	print("Activo "+str(chatActivo)+": " + str(chatsControl[chatActivo]))
 	chatsControl[chatActivo].recibirMensajes()
 	
 
 func finDeChat():
+	chatActivo += 1
 	if chatActivo < chats.size():
-		chatActivo += 1
+		chatsControl[chatActivo].recibirMensajes()
 		
-		print(chatsControl[chatActivo])
+		var s = buttStyle.duplicate()
+		s.bg_color = Color(0.95, 1.0, 0.0, 0.294)
+		butts[chatActivo].add_theme_stylebox_override("normal", s)
 	else:
 		TheMaster.goToScene(final, TheMaster.finales.bueno)
 	
