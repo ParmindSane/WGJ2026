@@ -11,6 +11,8 @@ func _ready():
 	buttYes.pressed.connect(goBadEnding)
 	buttNo.pressed.connect(decirNo)
 	
+	hide()
+	
 
 func setOpciones(_yes: String, _no: String, _tanda: int):
 	buttYes.text = _yes

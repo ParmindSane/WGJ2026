@@ -1,15 +1,21 @@
 [gd_scene format=3 uid="uid://cvuhx2fgwq61k"]
 
 [ext_resource type="Script" uid="uid://byyfn452p5fbv" path="res://mensajes/mensaje.gd" id="1_6q5bo"]
+[ext_resource type="StyleBox" uid="uid://cmyxydyiioejq" path="res://mensajes/mensajeEnviado.tres" id="1_uuh8o"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tqpjn"]
+font_color = Color(0, 0, 0, 1)
 
 [node name="Mensaje" type="PanelContainer" unique_id=402123576 node_paths=PackedStringArray("label")]
 custom_minimum_size = Vector2(150, 50)
 size_flags_horizontal = 8
+theme_override_styles/panel = ExtResource("1_uuh8o")
 script = ExtResource("1_6q5bo")
 label = NodePath("Label")
 
 [node name="Label" type="Label" parent="." unique_id=1705463368]
 layout_mode = 2
 text = "mensaje (?"
+label_settings = SubResource("LabelSettings_tqpjn")
 horizontal_alignment = 2
 vertical_alignment = 1

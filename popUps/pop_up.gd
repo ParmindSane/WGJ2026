@@ -1,11 +1,11 @@
 class_name PopUp
-extends Sprite2D
+extends PanelContainer
 
 @export var nivel := 0
 
 @export var botones: Control
 @onready var butts := botones.get_children()
-var buttActivo: Button
+var buttActivo: BaseButton
 
 @export var tiempo: Label
 @export var tiempoMargen: Vector2
@@ -44,8 +44,10 @@ func mostrar():
 	
 	if nivel == 2:
 		buttActivo.disabled = true
+		tiempo.reparent(buttActivo, false)
 		tiempo.show()
 		timer.start(R.randf_range(tiempoMargen.x, tiempoMargen.y))
+		
 		await timer.timeout
 		buttActivo.disabled = false
 		tiempo.hide()

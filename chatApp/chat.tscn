@@ -1,16 +1,33 @@
 [gd_scene format=3 uid="uid://imal5mho24vc"]
 
 [ext_resource type="Script" uid="uid://dpku6e4f14sfb" path="res://mensajes/mensajes.gd" id="1_i3wff"]
+[ext_resource type="Texture2D" uid="uid://biqfvx6fmikak" path="res://chatApp/assets/imagenes/UI-bg.png" id="1_m8vcb"]
 [ext_resource type="Script" uid="uid://nb4l1ksvvt0g" path="res://mensajes/opciones.gd" id="2_i3wff"]
 [ext_resource type="PackedScene" uid="uid://ddkfme812poeb" path="res://menu/menu.tscn" id="3_nst8m"]
 [ext_resource type="Script" uid="uid://dk566m5b23sak" path="res://popUps/pop_ups.gd" id="4_xuhkm"]
 [ext_resource type="PackedScene" uid="uid://bnkga81bkstr8" path="res://popUps/pop_up.tscn" id="5_njpkb"]
+[ext_resource type="Texture2D" uid="uid://iqltbef7noh0" path="res://chatApp/assets/imagenes/UI-botoncerrar.png" id="7_j22gf"]
+[ext_resource type="Texture2D" uid="uid://bg8hig3poju2o" path="res://chatApp/assets/imagenes/UI-botoncerrar2.png" id="8_auibd"]
 
 [node name="Node2D" type="Node2D" unique_id=945820080]
 
+[node name="Fondo" type="CanvasLayer" parent="." unique_id=521798269]
+layer = -5
+
+[node name="TextureRect" type="TextureRect" parent="Fondo" unique_id=678158611]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_m8vcb")
+
 [node name="Perfiles" type="VBoxContainer" parent="." unique_id=1241352945]
-offset_right = 128.0
-offset_bottom = 256.0
+visible = false
+offset_left = 16.0
+offset_top = 144.0
+offset_right = 304.0
+offset_bottom = 304.0
 size_flags_vertical = 3
 metadata/_edit_group_ = true
 
@@ -27,9 +44,10 @@ text = "chat 2"
 [node name="chat1" type="CanvasLayer" parent="." unique_id=617141949]
 
 [node name="ScrollContainer" type="ScrollContainer" parent="chat1" unique_id=1634922461]
-offset_left = 384.0
-offset_right = 768.0
-offset_bottom = 448.0
+offset_left = 344.0
+offset_top = 176.0
+offset_right = 904.0
+offset_bottom = 840.0
 follow_focus = true
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 2
@@ -44,11 +62,10 @@ scrollNodo = NodePath("..")
 guion = "res://mensajes/mensajes1.txt"
 
 [node name="Opciones" type="VBoxContainer" parent="chat1" unique_id=435834509 node_paths=PackedStringArray("buttYes", "buttNo")]
-visible = false
-offset_left = 448.0
-offset_top = 480.0
-offset_right = 704.0
-offset_bottom = 608.0
+offset_left = 480.0
+offset_top = 880.0
+offset_right = 736.0
+offset_bottom = 1008.0
 size_flags_vertical = 3
 script = ExtResource("2_i3wff")
 buttYes = NodePath("Yes")
@@ -71,28 +88,58 @@ script = ExtResource("4_xuhkm")
 opciones = NodePath("../Opciones")
 
 [node name="PopUp" parent="chat1/PopUps" unique_id=872176486 instance=ExtResource("5_njpkb")]
-position = Vector2(576, 256)
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
 
 [node name="PopUp2" parent="chat1/PopUps" unique_id=984780521 instance=ExtResource("5_njpkb")]
-position = Vector2(576, 256)
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
 nivel = 1
 
 [node name="PopUp3" parent="chat1/PopUps" unique_id=742094352 instance=ExtResource("5_njpkb")]
-position = Vector2(576, 256)
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
 nivel = 1
 
 [node name="PopUp4" parent="chat1/PopUps" unique_id=821169681 instance=ExtResource("5_njpkb")]
-position = Vector2(576, 256)
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
 nivel = 1
 
 [node name="PopUp5" parent="chat1/PopUps" unique_id=1412076695 instance=ExtResource("5_njpkb")]
-position = Vector2(576, 256)
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
 nivel = 2
 
 [node name="PopUp6" parent="chat1/PopUps" unique_id=432866913 instance=ExtResource("5_njpkb")]
-position = Vector2(576, 256)
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
 nivel = 2
 
 [node name="PopUp7" parent="chat1/PopUps" unique_id=1427438915 instance=ExtResource("5_njpkb")]
-position = Vector2(576, 256)
+offset_left = 608.0
+offset_top = 512.0
+offset_right = 778.6667
+offset_bottom = 677.3334
 nivel = 2
+
+[node name="Cerrar" type="TextureButton" parent="." unique_id=288613811]
+offset_left = 1080.0
+offset_top = 8.0
+offset_right = 1132.0
+offset_bottom = 60.0
+scale = Vector2(1.2307695, 1.2307695)
+texture_normal = ExtResource("7_j22gf")
+texture_hover = ExtResource("8_auibd")

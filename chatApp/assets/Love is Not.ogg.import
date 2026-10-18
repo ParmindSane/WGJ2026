@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bykhasfddci1l"
+path="res://.godot/imported/Love is Not.ogg-7322422fd4792957cbb2e4855f973ddb.oggvorbisstr"
+
+[deps]
+
+source_file="res://chatApp/assets/Love is Not.ogg"
+dest_files=["res://.godot/imported/Love is Not.ogg-7322422fd4792957cbb2e4855f973ddb.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

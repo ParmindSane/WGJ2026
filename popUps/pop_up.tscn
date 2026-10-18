@@ -1,69 +1,79 @@
 [gd_scene format=3 uid="uid://bnkga81bkstr8"]
 
-[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_vvbuu"]
+[ext_resource type="StyleBox" uid="uid://cmyxydyiioejq" path="res://mensajes/mensajeEnviado.tres" id="1_att3v"]
 [ext_resource type="Script" uid="uid://dqsqii6fyd4uq" path="res://popUps/pop_up.gd" id="2_3lr0a"]
+[ext_resource type="Texture2D" uid="uid://bg8hig3poju2o" path="res://chatApp/assets/imagenes/UI-botoncerrar2.png" id="3_att3v"]
+[ext_resource type="Texture2D" uid="uid://iqltbef7noh0" path="res://chatApp/assets/imagenes/UI-botoncerrar.png" id="3_oilrx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3lr0a"]
 font_size = 10
 outline_size = 10
 outline_color = Color(0, 0, 0, 1)
 
-[node name="PopUp" type="Sprite2D" unique_id=872176486 node_paths=PackedStringArray("botones", "tiempo") groups=["popUp"]]
+[node name="PopUp" type="PanelContainer" unique_id=300935196 node_paths=PackedStringArray("botones", "tiempo") groups=["popUp"]]
+offset_left = -128.0
+offset_top = -128.0
+offset_right = 42.66667
+offset_bottom = 37.333344
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("1_vvbuu")
+theme_override_styles/panel = ExtResource("1_att3v")
 script = ExtResource("2_3lr0a")
 botones = NodePath("Botones")
 tiempo = NodePath("Tiempo")
-tiempoMargen = Vector2(5, 10)
+tiempoMargen = Vector2(10, 15)
 
 [node name="Botones" type="Control" parent="." unique_id=614271673]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -64.0
-offset_top = -64.0
-offset_right = -64.0
-offset_bottom = -64.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
 
-[node name="Button" type="Button" parent="Botones" unique_id=782841030]
+[node name="Button" type="TextureButton" parent="Botones" unique_id=1614455365]
 layout_mode = 0
-offset_left = 90.66667
-offset_top = 5.333336
-offset_right = 122.66667
-offset_bottom = 36.333336
-text = "X"
+offset_left = 141.33334
+offset_top = -13.333331
+offset_right = 168.00002
+offset_bottom = 13.333333
+texture_normal = ExtResource("3_oilrx")
+texture_hover = ExtResource("3_att3v")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="Button2" type="Button" parent="Botones" unique_id=2027486434]
+[node name="Button2" type="TextureButton" parent="Botones" unique_id=1770758582]
 layout_mode = 0
-offset_left = 15.999996
-offset_top = 16.0
-offset_right = 47.999996
-offset_bottom = 47.0
-text = "X"
+offset_left = 144.0
+offset_top = 138.66667
+offset_right = 176.0
+offset_bottom = 170.66667
+texture_normal = ExtResource("3_oilrx")
+texture_hover = ExtResource("3_att3v")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="Button3" type="Button" parent="Botones" unique_id=1844005888]
+[node name="Button3" type="TextureButton" parent="Botones" unique_id=2090222433]
 layout_mode = 0
-offset_top = 96.0
-offset_right = 53.333332
-offset_bottom = 127.0
-text = "->"
+offset_left = -2.6666641
+offset_top = -2.666668
+offset_right = 29.333344
+offset_bottom = 29.333332
+texture_normal = ExtResource("3_oilrx")
+texture_hover = ExtResource("3_att3v")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="Button4" type="Button" parent="Botones" unique_id=753993499]
+[node name="Button4" type="TextureButton" parent="Botones" unique_id=611849360]
 layout_mode = 0
-offset_left = 74.66667
-offset_top = 90.66667
-offset_right = 106.66667
-offset_bottom = 121.66667
-text = "X"
+offset_left = 18.666668
+offset_top = 130.66667
+offset_right = 45.333332
+offset_bottom = 157.33333
+texture_normal = ExtResource("3_oilrx")
+texture_hover = ExtResource("3_att3v")
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="Tiempo" type="Label" parent="." unique_id=1752531438]
-offset_left = 15.0
-offset_top = 15.0
-offset_right = 55.0
-offset_bottom = 38.0
+layout_mode = 2
+size_flags_horizontal = 0
+offset_transform_enabled = true
+offset_transform_position = Vector2(15, 15)
 text = "5"
 label_settings = SubResource("LabelSettings_3lr0a")
 horizontal_alignment = 1

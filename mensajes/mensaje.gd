@@ -6,6 +6,8 @@ extends PanelContainer
 @export_group("Referencias internas")
 @export var label: Label
 
+#@onready var estilo: StyleBoxFlat = preload("res://mensajes/mensajeEnviado.tres")
+
 func setData(_texto: String, _derecha: bool):
 	label.text = _texto
 	
@@ -14,4 +16,8 @@ func setData(_texto: String, _derecha: bool):
 		size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
 		
+		var estilo = get_theme_stylebox("panel").duplicate()
+		estilo.bg_color = Color(1.0, 1.0, 1.0, 1.0)
+		estilo.shadow_color = Color(0.537, 0.757, 1.0)
+		add_theme_stylebox_override("panel", estilo)
 	
