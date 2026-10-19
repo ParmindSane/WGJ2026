@@ -24,16 +24,22 @@ func _ready():
 	
 
 func mostrar(_final: finales, _mensajes: Mensajes):
-	print("mostrar final " + str(_final))
+	print("mostrar final " + str(_final) + " entre " + str(finales))
 	
 	final = _final
 	rect.texture = texturas[final]
 	chatTerminado = _mensajes
 	
-	if final == finales.bueno1 || final == finales.bueno2 || finales.buenardo:
-		GlobalSonido.cambiarMusiquita(GlobalSonido.musiquitasNombres.menu)
-	else:
+	print(final == finales.bueno1)
+	print(final == finales.bueno2)
+	print(final == finales.buenardo)
+	print(final == finales.malo1)
+	print(final == finales.malo2)
+	
+	if final == finales.malo1 || final == finales.malo2:
 		GlobalSonido.cambiarMusiquita(GlobalSonido.musiquitasNombres.juego)
+	else:
+		GlobalSonido.cambiarMusiquita(GlobalSonido.musiquitasNombres.menu)
 	
 	show()
 	

@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/SiCh@t.ogg-0f4d604fa1b364e38feb5311ded21ab8.o
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
+loop=true
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4
