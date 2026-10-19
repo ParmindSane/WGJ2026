@@ -21,8 +21,6 @@ func _ready():
 				else:
 					return false)
 			)
-		for b in popupsPorNivel[-1]:
-			b.cerrado.connect(cerrar)
 	
 
 func dijoNo(_tanda: int):
@@ -37,16 +35,15 @@ func mostrar():
 	for n in popupsPorNivel[tanda]:
 		n.mostrar()
 		await get_tree().create_timer(R.randf_range(0.1, 0.5)).timeout
-	popupsVisibles = popupsPorNivel[tanda]
 	
 
 signal cerrados(_tanda: int)
-func cerrar(_popap: PopUp):
-	var i = popupsVisibles.find(_popap)
-	popupsVisibles.remove_at(i)
-	
-	print("popups visibles: " + str(popupsVisibles.size()))
-	if popupsVisibles.size() == 0:
-		mostrando = false
-		cerrados.emit()
+func _process(_delta):
+	if mostrando:
+		popupsVisibles = popupsPorNivel[tanda].filter(func(p: PopUp): return p.visible)
+		print("Popups visibles: " + str(popupsVisibles))
+		
+		if popupsVisibles.size() == 0:
+			mostrando = false
+			cerrados.emit()
 	

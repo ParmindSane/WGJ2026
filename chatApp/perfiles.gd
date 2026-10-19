@@ -17,6 +17,7 @@ func _ready():
 	salir.pressed.connect(func(): DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED))
 	
 	for c in chatsControl:
+		c.mensajeRecibido.connect(notificar)
 		c.finDeChat.connect(finDeChat)
 		chats.push_back(c.chatNodo)
 	
@@ -27,12 +28,14 @@ func _ready():
 	switchChats(0)
 	await get_tree().create_timer(2).timeout
 	
+	chatsControl[chatActivo].recibirMensajes()
+	
+
+func notificar(_mensajes: Mensajes):
 	if(chatActivo != chatVisible):
 		var s = buttStyle.duplicate()
 		s.bg_color = Color(0.95, 1.0, 0.0, 0.294)
 		butts[chatActivo].add_theme_stylebox_override("normal", s)
-	
-	chatsControl[chatActivo].recibirMensajes()
 	
 
 func finDeChat():
@@ -41,10 +44,6 @@ func finDeChat():
 	if chatActivo < chats.size():
 		await get_tree().create_timer(1.25).timeout
 		chatsControl[chatActivo].recibirMensajes()
-		
-		var s = buttStyle.duplicate()
-		s.bg_color = Color(0.95, 1.0, 0.0, 0.294)
-		butts[chatActivo].add_theme_stylebox_override("normal", s)
 	else:
 		print("Final buenardo")
 		final.mostrar(Endings.finales.buenardo, chatsControl[chatActivo-1])

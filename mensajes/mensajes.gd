@@ -53,6 +53,7 @@ func _process(_delta):
 		mensajeDelay = Vector2(0.05,0.05)
 	
 
+signal mensajeRecibido(ref: Mensajes)
 func recibirMensajes():
 	mensajeDelay = Vector2(2,3)
 	for d in mensajesDatos[tanda]:
@@ -61,6 +62,7 @@ func recibirMensajes():
 		mensajesNodos.push_back(m)
 		add_child(m)
 		
+		mensajeRecibido.emit(self)
 		await get_tree().create_timer(R.randf_range(mensajeDelay.x, mensajeDelay.y)).timeout
 	
 	popUpsCerrados = false

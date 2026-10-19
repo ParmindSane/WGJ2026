@@ -40,9 +40,10 @@ func _ready():
 	
 
 func _process(_delta):
-	if nivel == 2:
-		if !timer.is_stopped():
-			tiempo.text = str(int(timer.time_left))
+	if visible:
+		if nivel == 2:
+			if !timer.is_stopped():
+				tiempo.text = str(int(timer.time_left))
 	
 
 func mostrar():
